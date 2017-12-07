@@ -19,11 +19,11 @@
         <activity android:name=".BannerActivity" android:label="Banner">
 
             <!--多个LAUNCHER可以有多个入口-->
-            <intent-filter>
-            <action android:name="android.intent.action.MAIN"/>
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN"/>-->
 
-            <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
         </activity>
         <activity android:name=".AppBarActivity"/>
 
