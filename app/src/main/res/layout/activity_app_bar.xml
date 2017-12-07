@@ -26,7 +26,7 @@
             app:expandedTitleMarginBottom="50dp"
             app:expandedTitleTextAppearance="@style/ExtendText"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:title="伸缩头实例">
+            app:title="伸缩头示例">
 
             <ImageView
                 android:layout_width="match_parent"
