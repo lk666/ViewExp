@@ -26,4 +26,12 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#fff</item>
     </style>
+
+    <style name="Theme.ToolBar.ZhiHu" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="actionOverflowButtonStyle">@style/ActionButton.Overflow.ZhiHu</item>
+    </style>
+
+    <style name="ActionButton.Overflow.ZhiHu" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@mipmap/menu</item>
+    </style>
 </resources>

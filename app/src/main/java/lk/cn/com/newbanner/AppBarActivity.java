@@ -6,7 +6,9 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -17,7 +19,7 @@ public class AppBarActivity extends AppCompatActivity {
     private FloatingActionButton fab;
     private AppBarLayout appbar;
     private CollapsingToolbarLayout collapsingToolbarLayout;
-
+private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +47,51 @@ public class AppBarActivity extends AppCompatActivity {
         appbar = findViewById(R.id.appbar);
         collapsingToolbarLayout = findViewById(R.id.collapsingToolbarLayout);
 
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(AppBarActivity.this, "点击了导航图标", Toast.LENGTH_SHORT)
+                        .show();
+            }
+        });
+        toolbar.inflateMenu(R.menu.menu_app_bar);
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                int menuItemId = item.getItemId();
+                if (menuItemId == R.id.action_search) {
+                    Toast.makeText(AppBarActivity.this , "search" , Toast.LENGTH_SHORT).show();
+
+                } else if (menuItemId == R.id.action_notification) {
+                    Toast.makeText(AppBarActivity.this , "notifications" , Toast.LENGTH_SHORT).show();
+
+                } else if (menuItemId == R.id.action_item1) {
+                    Toast.makeText(AppBarActivity.this , "item_01" , Toast.LENGTH_SHORT).show();
+
+                } else if (menuItemId == R.id.action_item2) {
+                    Toast.makeText(AppBarActivity.this , "R.string.item_02" , Toast.LENGTH_SHORT).show();
+
+                }
+                return true;
+            }
+        });
+
+        findViewById(R.id.tv0).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(AppBarActivity.this, "点击了自定义View", Toast.LENGTH_SHORT)
+                        .show();
+            }
+        });
+
         appbar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                 Log.d("onOffsetChanged", "" + verticalOffset);
+
             }
         });
     }
+
 }

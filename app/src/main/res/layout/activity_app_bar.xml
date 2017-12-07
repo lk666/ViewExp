@@ -39,11 +39,26 @@
             <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
                 android:id="@+id/toolbar"
+                app:collapseIcon="@mipmap/menu"
+                android:theme="@style/Theme.ToolBar.ZhiHu"
+                app:contentInsetStartWithNavigation="20sp"
+                app:layout_collapseMode="pin"
                 android:layout_height="56dp"
-                app:layout_collapseMode="pin"/>
+                app:navigationIcon="@mipmap/arrow_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn"
+                    android:text="自定义View"
+                    android:textColor="#fff"
+                    android:id="@+id/tv0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+            </android.support.v7.widget.Toolbar>
 
         </android.support.design.widget.CollapsingToolbarLayout>
-
 
 
         <!--<android.support.v7.widget.Toolbar-->
@@ -95,7 +110,7 @@
             android:id="@+id/tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="app:backgroundTint - 设置FAB的背景颜色。\n\napp:rippleColor - 设置FAB点击时的背景颜色。\n\napp:borderWidth - 该属性尤为重要，如果不设置0dp，那么在4.1的sdk上FAB会显示为正方形，而且在5.0以后的sdk没有阴影效果。所以设置为borderWidth=0dp。\n\napp:elevation - 默认状态下FAB的阴影大小。\n\napp:pressedTranslationZ - 点击时候FAB的阴影大小。\n\napp:fabSize - 设置FAB的大小，该属性有两个值，分别为normal和mini，对应的FAB大小分别为56dp和40dp。\n\n
+            android:text="ToolBar图标必须为24dp\n========================================\napp:backgroundTint - 设置FAB的背景颜色。\n\napp:rippleColor - 设置FAB点击时的背景颜色。\n\napp:borderWidth - 该属性尤为重要，如果不设置0dp，那么在4.1的sdk上FAB会显示为正方形，而且在5.0以后的sdk没有阴影效果。所以设置为borderWidth=0dp。\n\napp:elevation - 默认状态下FAB的阴影大小。\n\napp:pressedTranslationZ - 点击时候FAB的阴影大小。\n\napp:fabSize - 设置FAB的大小，该属性有两个值，分别为normal和mini，对应的FAB大小分别为56dp和40dp。\n\n
 src - 设置FAB的图标，Google建议符合Design设计的该图标大小为24dp。\n\napp:layout_anchor - 设置FAB的锚点，即以哪个控件为参照点设置位置，如果是在列表界面中，这个值通常设置为列表控件的id。\n\napp:layout_anchorGravity - 设置FAB相对锚点的位置，值有 bottom、center、right、left、top等。\n========================================\nscroll - 想滚动就必须设置这个。\n\nenterAlways - 实现quick return效果, 当向下移动时，立即显示View（比如Toolbar)。\n\nexitUntilCollapsed - 向上滚动时收缩View，但可以固定Toolbar一直在上面。\n\nenterAlwaysCollapsed - 实测单独使用在普通view上没卵用。当你的View已经设置minHeight属性又使用此标志时，你的View只能以最小高度进入，只有当滚动视图到达顶部时才扩大到完整高度。"
             android:textSize="32sp"/>
     </android.support.v4.widget.NestedScrollView>
@@ -116,4 +131,5 @@ src - 设置FAB的图标，Google建议符合Design设计的该图标大小为24
         app:pressedTranslationZ="12dp"
         android:layout_marginRight="50dp"
         app:rippleColor="#ff0000"/>
+
 </android.support.design.widget.CoordinatorLayout>
