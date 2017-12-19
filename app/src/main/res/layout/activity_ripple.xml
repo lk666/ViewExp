@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="#f6f6f6">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="有边界默认效果--?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:textStyle="bold"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:textColor="#999999"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="无边界默认效果--?android:attr/selectableItemBackgroundBorderless"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:layout_height="wrap_content"
+        tools:targetApi="lollipop" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="自定义有边界默认效果"
+            android:clickable="true"
+            android:focusable="true"
+            android:textStyle="bold"
+            android:background="@drawable/bg_ripple"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

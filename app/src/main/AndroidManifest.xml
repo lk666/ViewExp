@@ -26,6 +26,7 @@
             <!--</intent-filter>-->
         </activity>
         <activity android:name=".AppBarActivity"/>
+        <activity android:name=".RippleActivity" />
 
     </application>
 
