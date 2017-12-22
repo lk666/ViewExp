@@ -65,4 +65,16 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="10dp"
+        android:text="默认的ripple效果只有在api21（5.0）以上才能正常显示，若设置的是background，则在低版本上显示的是默认的列表选中效果（淡蓝色），若设置的是foreground，则不会显示。"
+        android:textColor="#ee2222"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 </LinearLayout>
