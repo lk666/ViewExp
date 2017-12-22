@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/timg"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.9"/>
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="#0058f1"
+                android:orientation="vertical"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.3"/>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:behavior_overlapTop="30dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ToolBar图标必须为24dp\n========================================\napp:backgroundTint - 设置FAB的背景颜色。\n\napp:rippleColor - 设置FAB点击时的背景颜色。\n\napp:borderWidth - 该属性尤为重要，如果不设置0dp，那么在4.1的sdk上FAB会显示为正方形，而且在5.0以后的sdk没有阴影效果。所以设置为borderWidth=0dp。\n\napp:elevation - 默认状态下FAB的阴影大小。\n\napp:pressedTranslationZ - 点击时候FAB的阴影大小。\n\napp:fabSize - 设置FAB的大小，该属性有两个值，分别为normal和mini，对应的FAB大小分别为56dp和40dp。\n\n
+src - 设置FAB的图标，Google建议符合Design设计的该图标大小为24dp。\n\napp:layout_anchor - 设置FAB的锚点，即以哪个控件为参照点设置位置，如果是在列表界面中，这个值通常设置为列表控件的id。\n\napp:layout_anchorGravity - 设置FAB相对锚点的位置，值有 bottom、center、right、left、top等。\n========================================\nscroll - 想滚动就必须设置这个。\n\nenterAlways - 实现quick return效果, 当向下移动时，立即显示View（比如Toolbar)。\n\nexitUntilCollapsed - 向上滚动时收缩View，但可以固定Toolbar一直在上面。\n\nenterAlwaysCollapsed - 实测单独使用在普通view上没卵用。当你的View已经设置minHeight属性又使用此标志时，你的View只能以最小高度进入，只有当滚动视图到达顶部时才扩大到完整高度。"
+            android:textSize="32sp"/>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main.toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ff0000"
+        app:layout_anchor="@id/frameLayout"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <!--<TextView-->
+
+    <!--android:id="@+id/tv_title"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:background="#58f100"-->
+    <!--android:gravity="center"-->
+    <!--android:text="头条"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="18sp"-->
+    <!--/>-->
+    <!--app:layout_behavior=".DrawerBehavior"-->
+
+
+</android.support.design.widget.CoordinatorLayout>

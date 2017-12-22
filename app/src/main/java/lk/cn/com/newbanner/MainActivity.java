@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     {
         list.add(new ActivityItem("banner切换动画及新的自定义banner指示器", BannerActivity.class));
-        list.add(new ActivityItem("metal design简单实例", AppBarActivity.class));
+        list.add(new ActivityItem("AppbarLayout简单实例", AppBarActivity.class));
+        list.add(new ActivityItem("metal design简单实例", BehaviorActivity.class));
         list.add(new ActivityItem("Ripple涟漪效果", RippleActivity.class));
     }
 
