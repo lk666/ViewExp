@@ -151,12 +151,12 @@
         android:text="老年养生"
         android:textColor="#fff"
         android:textSize="18sp"
-        app:layout_behavior=".TitleBehavior" />
+        app:layout_behavior=".behavior.TitleBehavior" />
 
     <ImageView
         android:src="@mipmap/ic_launcher_round"
         android:layout_width="100dp"
-        app:layout_behavior=".IVBehavior"
+        app:layout_behavior=".behavior.IVBehavior"
         android:layout_height="100dp"/>
 
 

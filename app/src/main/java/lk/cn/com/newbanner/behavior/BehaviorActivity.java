@@ -1,7 +1,9 @@
-package lk.cn.com.newbanner;
+package lk.cn.com.newbanner.behavior;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import lk.cn.com.newbanner.R;
 
 /**
  * Toolbar使用

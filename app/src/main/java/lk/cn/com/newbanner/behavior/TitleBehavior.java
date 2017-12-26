@@ -1,10 +1,12 @@
-package lk.cn.com.newbanner;
+package lk.cn.com.newbanner.behavior;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
+
+import lk.cn.com.newbanner.R;
 
 /**
  * 顶部title高度变化的behavior，view初始化的时候即会执行onDependentViewChanged
