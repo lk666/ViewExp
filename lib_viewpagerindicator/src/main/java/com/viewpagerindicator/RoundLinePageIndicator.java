@@ -275,7 +275,6 @@ public class RoundLinePageIndicator extends View implements PageIndicator {
                 curLeft += lineWidthAndGap;
             }
         } else {
-            // TODO: lk 2017/12/5 会在滑动末尾时，在上个选中的地方中间出现一条白线
             // 绘制变化过程
             boolean isBack = lastPositionOffset > positionOffset; // 向前滑
 

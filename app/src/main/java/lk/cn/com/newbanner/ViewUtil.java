@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
 
 /**
  * View相关工具类
@@ -74,6 +75,10 @@ public class ViewUtil {
     public static int dp2px(float dp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, APPContext
                 .getInstance().getResources().getDisplayMetrics());
+    }
+
+    public static void toast(String s) {
+        Toast.makeText(APPContext.getInstance(), s, Toast.LENGTH_SHORT).show();
     }
 
     //    /**

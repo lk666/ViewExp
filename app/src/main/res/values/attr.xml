@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleProgress">
+        <attr name="thiness" format="dimension"/>
+        <attr name="color" format="color"/>
+        <attr name="inner_color" format="color"/>
+        <attr name="progress" format="float"/>
+        <attr name="android:width"/>
+    </declare-styleable>
+</resources>

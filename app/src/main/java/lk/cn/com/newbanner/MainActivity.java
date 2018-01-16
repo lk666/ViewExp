@@ -8,6 +8,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 
 import java.util.ArrayList;
 
+import lk.cn.com.newbanner.alarm.AlarmActivity;
 import lk.cn.com.newbanner.behavior.BehaviorActivity;
 
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ActivityItem("伸缩toolbar、fab使用示例", AppBarActivity.class));
         list.add(new ActivityItem("Behavior使用示例", BehaviorActivity.class));
         list.add(new ActivityItem("Ripple涟漪效果", RippleActivity.class));
+        list.add(new ActivityItem("定时器", AlarmActivity.class));
     }
 
     @Override
