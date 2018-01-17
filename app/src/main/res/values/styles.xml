@@ -1,11 +1,14 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#0058f1</item>
+        <item name="colorPrimaryDark">#0058f1</item>
+        <item name="android:windowBackground">@color/white_f2</item>
+        <item name="android:colorForeground">#e5e5e5</item>
+        <item name="colorAccent">#0058f1</item>
+        <item name="colorControlNormal">#d3d3d3</item>
     </style>
 
     <style name="Btn1">
@@ -33,5 +36,42 @@
 
     <style name="ActionButton.Overflow.Sample" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
         <item name="android:src">@mipmap/menu</item>
+    </style>
+
+    <!--1.colorPrimaryDark 应用的主要暗色调，statusBarColor默认使用该颜色，v21-->
+    <!--2.android:windowBackground 窗口背景颜色，必须为引用值-->
+    <!--3.android:navigationBarColor 底部栏颜色，v21-->
+    <!--4.colorForeground 应用的前景色，ListView的分割线，switch滑动区默认使用该颜色-->
+    <!--5.colorAccent CheckBox，RadioButton，SwitchCompat等一般控件的选中效果默认采用该颜色，v21-->
+    <!--6.colorControlNormal CheckBox，RadioButton，SwitchCompat等默认状态的颜色。，v21-->
+    <!--7.colorControlHighlight 控件按压时的色调，v21-->
+    <!--8.colorControlActivated 控件选中时的颜色，默认使用colorAccent，v21-->
+    <!--9.colorButtonNormal 默认按钮的背景颜色，v21-->
+    <!--10.editTextColor：默认EditView输入框字体的颜色。-->
+    <!--11.textColor Button，textView的文字颜色-->
+    <!--12.textColorPrimaryDisableOnly RadioButton checkbox等控件的文字-->
+
+    <!--13.colorPrimary 应用的主要色调，actionBar默认使用该颜色，Toolbar导航栏的底色 ，v21 14.android:statusBarColor 状态栏颜色，默认使用colorPrimaryDark，v21-->
+    <!--15.colorSwitchThumbNormal: switch thumbs 默认状态的颜色. (switch off)-->
+
+    <!--16.colorBackground 应用的背景色，popMenu的背景默认使用该颜色（没试过）-->
+    <!--17.textColorPrimary 应用的主要文字颜色，actionBar的标题文字默认使用该颜色（没试过）-->
+    <style name="StyleTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary" tools:targetApi="lollipop">#5800f1</item>
+        <item name="android:colorPrimaryDark" tools:targetApi="lollipop">#00005522</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">#00000000</item>
+        <item name="android:windowBackground">@color/white_f2</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">#00000000</item>
+        <item name="android:colorForeground">#005863</item>
+        <item name="android:colorBackground">#00a565</item>
+        <item name="android:colorAccent" tools:targetApi="lollipop">#ff0000</item>
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">#a00000</item>
+        <item name="android:colorControlHighlight" tools:targetApi="lollipop">#00fa21</item>
+        <item name="android:colorControlActivated" tools:targetApi="lollipop">#ffeb33</item>
+        <item name="android:colorButtonNormal" tools:targetApi="lollipop">#f212a2</item>
+        <item name="android:editTextColor">#0000ff</item>
+        <item name="android:textColor">#ff00ff</item>
+        <item name="android:textColorPrimaryDisableOnly">#fac69a</item>
+        <item name="android:textColorPrimary">#333333</item>
     </style>
 </resources>

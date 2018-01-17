@@ -73,7 +73,8 @@
         android:clickable="true"
         android:focusable="true"
         android:padding="10dp"
-        android:text="默认的ripple效果只有在api21（5.0）以上才能正常显示，若设置的是background，则在低版本上显示的是默认的列表选中效果（淡蓝色），若设置的是foreground，则不会显示。"
+        android:text="默认的ripple效果只有在api21（5.0）以上才能正常显示，若设置的是background，则在低版本上显示的是默认的列表选中效果（淡蓝色），若设置的是foreground，则不会显示。
+\n\nselectableItemBackgroundBorderless在4.2的大神上会引起崩溃"
         android:textColor="#ee2222"
         android:textSize="18sp"
         android:textStyle="bold"/>

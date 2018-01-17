@@ -1,31 +1,31 @@
-package lk.cn.com.newbanner;
+package lk.cn.com.newbanner.immersive;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
 import java.util.ArrayList;
 
-import lk.cn.com.newbanner.alarm.AlarmActivity;
+import lk.cn.com.newbanner.ActivityItem;
+import lk.cn.com.newbanner.AppBarActivity;
+import lk.cn.com.newbanner.ItemAdapter;
+import lk.cn.com.newbanner.R;
+import lk.cn.com.newbanner.RippleActivity;
 import lk.cn.com.newbanner.behavior.BehaviorActivity;
-import lk.cn.com.newbanner.immersive.ImmersiveActivity;
 
-
-public class MainActivity extends AppCompatActivity {
+public class ImmersiveActivity extends FragmentActivity {
 
     private RecyclerView rv;
 
     private ArrayList<ActivityItem> list = new ArrayList<>();
 
     {
-        list.add(new ActivityItem("banner切换动画及新的自定义banner指示器", BannerActivity.class));
-        list.add(new ActivityItem("伸缩toolbar、fab使用示例", AppBarActivity.class));
-        list.add(new ActivityItem("Behavior使用示例", BehaviorActivity.class));
-        list.add(new ActivityItem("Ripple涟漪效果", RippleActivity.class));
-        list.add(new ActivityItem("定时器", AlarmActivity.class));
-        list.add(new ActivityItem("主题、沉浸式与状态栏、底部条", ImmersiveActivity.class));
+        list.add(new ActivityItem("主题设置", AppThemeActivity.class));
+        list.add(new ActivityItem("透明状态栏", AppBarActivity.class));
+        list.add(new ActivityItem("全屏沉浸式", BehaviorActivity.class));
+        list.add(new ActivityItem("底部导航栏", RippleActivity.class));
     }
 
     @Override

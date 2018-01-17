@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\lk\Desktop\new_banner\ViewExp.iml" filepath="C:\Users\lk\Desktop\new_banner\ViewExp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_viewpagerindicator/lib_viewpagerindicator.iml" filepath="$PROJECT_DIR$/lib_viewpagerindicator/lib_viewpagerindicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/new_banner.iml" filepath="$PROJECT_DIR$/new_banner.iml" />
-      <module fileurl="file://G:\ViewExp\new_banner.iml" filepath="G:\ViewExp\new_banner.iml" />
     </modules>
   </component>
 </project>
