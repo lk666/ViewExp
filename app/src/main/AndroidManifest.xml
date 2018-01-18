@@ -30,11 +30,12 @@
         <activity android:name=".RippleActivity" />
         <activity android:name=".behavior.BehaviorActivity"/>
         <activity android:name=".alarm.AlarmActivity"/>
-        <activity android:name=".immersive.ImmersiveActivity"/>
+        <activity android:name=".immersive.ThemeActivity"/>
         <activity
             android:name=".immersive.AppThemeActivity"
             android:label="AppThemeActivity"
             android:theme="@style/StyleTheme"/>
+        <activity android:name=".immersive.StateBarActivity"/>
 
     </application>
 

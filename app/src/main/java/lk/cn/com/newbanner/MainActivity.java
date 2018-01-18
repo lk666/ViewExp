@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import lk.cn.com.newbanner.alarm.AlarmActivity;
 import lk.cn.com.newbanner.behavior.BehaviorActivity;
-import lk.cn.com.newbanner.immersive.ImmersiveActivity;
+import lk.cn.com.newbanner.immersive.ThemeActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ActivityItem("Behavior使用示例", BehaviorActivity.class));
         list.add(new ActivityItem("Ripple涟漪效果", RippleActivity.class));
         list.add(new ActivityItem("定时器", AlarmActivity.class));
-        list.add(new ActivityItem("主题、沉浸式与状态栏、底部条", ImmersiveActivity.class));
+        list.add(new ActivityItem("主题、沉浸式与状态栏、底部条", ThemeActivity.class));
     }
 
     @Override

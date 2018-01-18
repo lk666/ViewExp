@@ -90,6 +90,77 @@ public class StatusBarUtil {
         }
     }
 
+    /**
+     * 增加View的高度,增加的值为状态栏高度.一般是在沉浸式全屏给ToolBar用的
+     */
+    public static void setHeight(Context context, View view) {
+        if (Build.VERSION.SDK_INT >= MIN_API) {
+            ViewGroup.LayoutParams lp = view.getLayoutParams();
+            lp.height += getStatusBarHeight(context);//增高
+            view.setLayoutParams(lp);
+        }
+    }
+
+    /**
+     * 增加View上边距（MarginTop）一般是给高度为 WARP_CONTENT 的小控件用的
+     */
+    public static void setMargin(Context context, View view) {
+        if (Build.VERSION.SDK_INT >= MIN_API) {
+            ViewGroup.LayoutParams lp = view.getLayoutParams();
+            if (lp instanceof ViewGroup.MarginLayoutParams) {
+                ((ViewGroup.MarginLayoutParams) lp).topMargin += getStatusBarHeight(context);//增高
+            }
+            view.setLayoutParams(lp);
+        }
+    }
+
+    public static int mixtureColor(int color, @FloatRange(from = 0.0, to = 1.0) float alpha) {
+        int a = (color & 0xff000000) == 0 ? 0xff : color >>> 24;
+        return (color & 0x00ffffff) | (((int) (a * alpha)) << 24);
+    }
+
+    /**
+     * 获取状态栏高度
+     */
+    public static int getStatusBarHeight(Context context) {
+        int result = 24;
+        int resId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resId > 0) {
+            result = context.getResources().getDimensionPixelSize(resId);
+        } else {
+            result = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                    result, Resources.getSystem().getDisplayMetrics());
+        }
+        return result;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //</editor-fold>
 
     //<editor-fold desc="DarkMode">
@@ -286,29 +357,6 @@ public class StatusBarUtil {
         }
     }
 
-    /**
-     * 增加View上边距（MarginTop）一般是给高度为 WARP_CONTENT 的小控件用的
-     */
-    public static void setMargin(Context context, View view) {
-        if (Build.VERSION.SDK_INT >= MIN_API) {
-            ViewGroup.LayoutParams lp = view.getLayoutParams();
-            if (lp instanceof ViewGroup.MarginLayoutParams) {
-                ((ViewGroup.MarginLayoutParams) lp).topMargin += getStatusBarHeight(context);//增高
-            }
-            view.setLayoutParams(lp);
-        }
-    }
-
-    /**
-     * 增加View的高度,增加的值为状态栏高度.一般是在沉浸式全屏给ToolBar用的
-     */
-    public static void setHeight(Context context, View view) {
-        if (Build.VERSION.SDK_INT >= MIN_API) {
-            ViewGroup.LayoutParams lp = view.getLayoutParams();
-            lp.height += getStatusBarHeight(context);//增高
-            view.setLayoutParams(lp);
-        }
-    }
 
     /**
      * 创建假的透明栏
@@ -332,23 +380,4 @@ public class StatusBarUtil {
         }
     }
 
-    public static int mixtureColor(int color, @FloatRange(from = 0.0, to = 1.0) float alpha) {
-        int a = (color & 0xff000000) == 0 ? 0xff : color >>> 24;
-        return (color & 0x00ffffff) | (((int) (a * alpha)) << 24);
-    }
-
-    /**
-     * 获取状态栏高度
-     */
-    public static int getStatusBarHeight(Context context) {
-        int result = 24;
-        int resId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resId > 0) {
-            result = context.getResources().getDimensionPixelSize(resId);
-        } else {
-            result = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                    result, Resources.getSystem().getDisplayMetrics());
-        }
-        return result;
-    }
 }
