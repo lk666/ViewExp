@@ -12,7 +12,6 @@ import lk.cn.com.newbanner.ActivityItem;
 import lk.cn.com.newbanner.ItemAdapter;
 import lk.cn.com.newbanner.R;
 import lk.cn.com.newbanner.RippleActivity;
-import lk.cn.com.newbanner.behavior.BehaviorActivity;
 
 public class ThemeActivity extends FragmentActivity {
 
@@ -23,7 +22,7 @@ public class ThemeActivity extends FragmentActivity {
     {
         list.add(new ActivityItem("主题设置", AppThemeActivity.class));
         list.add(new ActivityItem("透明状态栏", StateBarActivity.class));
-        list.add(new ActivityItem("全屏沉浸式", BehaviorActivity.class));
+        list.add(new ActivityItem("全屏沉浸式", ImmersiveActivity.class));
         list.add(new ActivityItem("底部导航栏", RippleActivity.class));
     }
 

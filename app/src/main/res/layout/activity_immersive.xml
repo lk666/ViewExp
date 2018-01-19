@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_height="match_parent"
+            app:contentScrim="#0058f1"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/timg"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7"/>
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:id="@+id/toolbar"
+                app:collapseIcon="@mipmap/menu"
+                android:theme="@style/Theme.ToolBar.Sample"
+                app:contentInsetStartWithNavigation="20sp"
+                app:layout_collapseMode="pin"
+                android:layout_height="56dp"
+                app:navigationIcon="@mipmap/arrow_back"/>
+
+            <!--Switch里面的圆跟外面的框高度是一样的-->
+            <Switch
+                android:id="@+id/sw"
+                app:layout_collapseMode="pin"
+                android:layout_gravity="right|bottom"
+                android:thumb="@drawable/switch_thumb"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="13dp"
+                android:track="@drawable/switch_track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1.colorPrimary 应用的主要色调，actionBar默认使用该颜色，Toolbar导航栏的底色\n\n
+2.colorPrimaryDark 应用的主要暗色调，statusBarColor默认使用该颜色\n\n
+3.statusBarColor 状态栏颜色，默认使用colorPrimaryDark\n\n
+4.windowBackground 窗口背景颜色\n\n
+5.navigationBarColor 底部栏颜色\n\n
+6.colorForeground 应用的前景色，ListView的分割线，switch滑动区默认使用该颜色\n\n
+7.colorBackground 应用的背景色，popMenu的背景默认使用该颜色\n\n
+8.colorAccent CheckBox，RadioButton，SwitchCompat等一般控件的选中效果默认采用该颜色\n\n
+9.colorControlNormal CheckBox，RadioButton，SwitchCompat等默认状态的颜色。\n\n
+10.colorControlHighlight 控件按压时的色调\n\n
+11.colorControlActivated 控件选中时的颜色，默认使用colorAccent\n\n
+12.colorButtonNormal 默认按钮的背景颜色\n\n
+13.editTextColor：默认EditView输入框字体的颜色。\n\n
+14.textColor Button，textView的文字颜色\n\n
+15.textColorPrimaryDisableOnly RadioButton checkbox等控件的文字\n\n
+16.textColorPrimary 应用的主要文字颜色，actionBar的标题文字默认使用该颜色\n\n
+17.colorSwitchThumbNormal: switch thumbs 默认状态的颜色. (switch off)"
+                android:textColor="#000"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

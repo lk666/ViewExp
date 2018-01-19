@@ -36,6 +36,7 @@
             android:label="AppThemeActivity"
             android:theme="@style/StyleTheme"/>
         <activity android:name=".immersive.StateBarActivity"/>
+        <activity android:name=".immersive.ImmersiveActivity"/>
 
     </application>
 
