@@ -1,4 +1,4 @@
-package lk.cn.com.newbanner.immersive;
+package lk.cn.com.newbanner.immersive.bilibili;
 
 import android.annotation.TargetApi;
 import android.graphics.Color;
@@ -11,10 +11,14 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 
 import lk.cn.com.newbanner.R;
+import lk.cn.com.newbanner.immersive.StatusBarUtil;
 
 public class ImmersiveActivity extends FragmentActivity {
     AppBarLayout appBarLayout;
     CollapsingToolbarLayout collapsingToolbarLayout;
+    GifView gif;
+    Switch sw;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,25 +27,46 @@ public class ImmersiveActivity extends FragmentActivity {
         StatusBarUtil.immersive(this, Color.argb(40, 0, 0, 0));
         fixTop();
 
-         appBarLayout = findViewById(R.id.appbar);
+        appBarLayout = findViewById(R.id.appbar);
+        gif = findViewById(R.id.gif);
         collapsingToolbarLayout = findViewById(R.id.collapsingToolbarLayout);
-
-        ((Switch) findViewById(R.id.sw)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        sw = findViewById(R.id.sw);
+        sw.setOnCheckedChangeListener(new CompoundButton
+                .OnCheckedChangeListener() {
 
             @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                AppBarLayout.LayoutParams lp = (AppBarLayout.LayoutParams) collapsingToolbarLayout.getLayoutParams();
+                AppBarLayout.LayoutParams lp = (AppBarLayout.LayoutParams)
+                        collapsingToolbarLayout.getLayoutParams();
                 if (isChecked) {
-                    appBarLayout.setExpanded(true,true);
+                    appBarLayout.setExpanded(true, true);
                     lp.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_EXIT_UNTIL_COLLAPSED);
+                    gif.start();
                 } else {
-                    appBarLayout.setExpanded(true,true);
+                    appBarLayout.setExpanded(true, true);
                     lp.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL | AppBarLayout
                             .LayoutParams.SCROLL_FLAG_EXIT_UNTIL_COLLAPSED);
+                    gif.stop();
                 }
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (sw.isChecked()) {
+            gif.start();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (sw.isChecked()) {
+            gif.stop();
+        }
     }
 
     public void fixTop() {

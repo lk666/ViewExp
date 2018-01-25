@@ -36,7 +36,10 @@
             android:label="AppThemeActivity"
             android:theme="@style/StyleTheme"/>
         <activity android:name=".immersive.StateBarActivity"/>
-        <activity android:name=".immersive.ImmersiveActivity"/>
+        <activity
+            android:name=".immersive.bilibili.ImmersiveActivity"
+            android:configChanges="keyboard|screenSize|orientation"
+            android:theme="@style/BilibiliTheme"/>
 
     </application>
 

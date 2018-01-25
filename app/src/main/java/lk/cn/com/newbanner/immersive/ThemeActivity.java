@@ -12,6 +12,7 @@ import lk.cn.com.newbanner.ActivityItem;
 import lk.cn.com.newbanner.ItemAdapter;
 import lk.cn.com.newbanner.R;
 import lk.cn.com.newbanner.RippleActivity;
+import lk.cn.com.newbanner.immersive.bilibili.ImmersiveActivity;
 
 public class ThemeActivity extends FragmentActivity {
 
