@@ -1,6 +1,7 @@
 package lk.cn.com.newbanner.immersive.bilibili;
 
 import android.annotation.TargetApi;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -51,6 +52,18 @@ public class ImmersiveActivity extends FragmentActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE || newConfig.orientation
+                == Configuration.ORIENTATION_PORTRAIT) {
+            if (gif != null) {
+                gif.startIf();
+            }
+        }
     }
 
     @Override
