@@ -12,7 +12,6 @@ import android.graphics.PorterDuff;
 import android.graphics.Shader;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 
 import lk.cn.com.newbanner.BitmapUtil;
@@ -58,7 +57,7 @@ public class GifView extends View {
 
         vx = 0.8f;
         vx0 = 0.8f;
-        vy0 = 3f;
+        vy0 = 2.3f;
         directY = vy0 < 0 ? -1 : 1;
         g = 0.01f;
     }
@@ -107,11 +106,11 @@ public class GifView extends View {
         // y坐标系相关参数
         double v02 = vy0 * vy0;
         double _2g = 2 * g;
-        double _2gy0 = _2g * y0;
+        double _2gy0 = 2 * g * y0;
         vBottom = Math.sqrt(v02 + _2g * (h - y0));
         vTop = _2gy0 <= v02 ? Math.sqrt(v02 - 2 * g * (y0 - radius)) : 0;
         tNon = (long) (vy0 >= 0 ? (vBottom - vy0) / g : (-vy0 - vTop) / g);
-        hTop = (int) (vTop == 0 ? (h - Math.sqrt(v02 / _2g)) : 0);
+        hTop = (int) (vTop == 0 ? (y0 - v02 / _2g) : 0);
         th = (long) ((vBottom - vTop) / g);
 
         isStop = false;
@@ -145,7 +144,7 @@ public class GifView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Log.d("Draw", stime + "  " + lastY);
+//        Log.d("Draw", stime + "  " + lastY);
         canvas.drawCircle(lastX, lastY, radius, ballPaint);
 
         if (!isStop) {
@@ -184,7 +183,7 @@ public class GifView extends View {
 
         detalTime -= tNon;
         long k = detalTime / th;
-        long t12 = detalTime - k * th;
+        long t12 = detalTime % th;
         k = k % 2;
 
         if (vy0 >= 0) {
