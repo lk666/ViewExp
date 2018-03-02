@@ -100,7 +100,7 @@
         <item name="android:colorPrimary" tools:targetApi="lollipop">#0058f1</item>
         <item name="android:colorPrimaryDark" tools:targetApi="lollipop">#66000000</item>
         <item name="android:windowBackground">@color/white_f2</item>
-        <item name="android:navigationBarColor" tools:targetApi="lollipop">#44000000</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">#000000</item>
         <item name="android:colorForeground">#e5e5e5</item>
         <item name="android:colorAccent" tools:targetApi="lollipop">#0058f1</item>
         <item name="android:colorControlNormal" tools:targetApi="lollipop">#999</item>
@@ -109,5 +109,9 @@
         <item name="android:editTextColor">#333</item>
         <item name="android:textColor">#666</item>
         <item name="android:textColorPrimaryDisableOnly">#333</item>
+    </style>
+
+    <style name="OverDrawTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/trans</item>
     </style>
 </resources>

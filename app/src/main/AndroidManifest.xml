@@ -40,6 +40,8 @@
             android:name=".immersive.bilibili.ImmersiveActivity"
             android:configChanges="keyboard|screenSize|orientation"
             android:theme="@style/BilibiliTheme"/>
+        <activity android:name=".OverDrawActivity"
+                  android:theme="@style/OverDrawTheme"/>
 
     </application>
 

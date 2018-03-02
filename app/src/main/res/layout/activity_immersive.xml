@@ -21,8 +21,11 @@
             <lk.cn.com.newbanner.immersive.bilibili.GifView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:id="@+id/gif"
-                android:background="#fff"
+                android:background="#e5e5e5"
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="0.7"/>
 
@@ -64,7 +67,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="1.colorPrimary 应用的主要色调，actionBar默认使用该颜色，Toolbar导航栏的底色\n\n
+                android:text="SYSTEM_UI_FLAG_LAYOUT_STABLE--在设置全屏时，加上这个标志位以后，布局不会占用状态栏的空间\n\n
+                SYSTEM_UI_FLAG_FULLSCREEN--全屏显示时，状态栏被隐藏 \n
+                SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN--全屏显示时，状态栏盖在布局上面\n\n
+                SYSTEM_UI_FLAG_HIDE_NAVIGATION--导航栏不显示\n
+                SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN--布局延伸到导航栏\n\n
+                1.colorPrimary 应用的主要色调，actionBar默认使用该颜色，Toolbar导航栏的底色\n\n
 2.colorPrimaryDark 应用的主要暗色调，statusBarColor默认使用该颜色\n\n
 3.statusBarColor 状态栏颜色，默认使用colorPrimaryDark\n\n
 4.windowBackground 窗口背景颜色\n\n

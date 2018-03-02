@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ActivityItem("Ripple涟漪效果", RippleActivity.class));
         list.add(new ActivityItem("定时器", AlarmActivity.class));
         list.add(new ActivityItem("主题、沉浸式与状态栏、底部条", ThemeActivity.class));
+        list.add(new ActivityItem("过度绘制", OverDrawActivity.class));
     }
 
     @Override
