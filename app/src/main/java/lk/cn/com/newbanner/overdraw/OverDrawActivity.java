@@ -1,7 +1,9 @@
-package lk.cn.com.newbanner;
+package lk.cn.com.newbanner.overdraw;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+
+import lk.cn.com.newbanner.R;
 
 public class OverDrawActivity extends FragmentActivity {
 

@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import lk.cn.com.newbanner.alarm.AlarmActivity;
 import lk.cn.com.newbanner.behavior.BehaviorActivity;
 import lk.cn.com.newbanner.immersive.ThemeActivity;
+import lk.cn.com.newbanner.overdraw.OverDrawActivity;
 
 
 public class MainActivity extends AppCompatActivity {
