@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv1"
+            style="@style/cTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/c_pink"
+            android:text="文本1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv2"
+            style="@style/cTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/c_pink"
+            android:text="文本222"
+            app:layout_constraintStart_toStartOf="@+id/tv1"
+            app:layout_constraintTop_toBottomOf="@+id/tv1"/>
+
+        <TextView
+            android:id="@+id/tv3"
+            style="@style/cTxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/c_blue"
+            android:text="在两个粉色框右侧"
+            app:layout_constraintBottom_toBottomOf="@+id/tv2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier5"
+            app:layout_constraintTop_toTopOf="@+id/tv1"/>
+
+
+        <TextView
+            android:id="@+id/tv4"
+            style="@style/cTxt"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/c_purple"
+            android:text="居中，高度占屏幕高度20%"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv5"
+            style="@style/cTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/c_green"
+            android:text="距左边60%屏幕宽度，居中元素下方"
+            app:layout_constraintEnd_toEndOf="@+id/tv3"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tv4"/>
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="tv1,tv2"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6"/>
+
+    </android.support.constraint.ConstraintLayout>
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="130dp"-->
+    <!--android:layout_height="130dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_margin="16dp"-->
+    <!--android:background="@color/c_purple"-->
+    <!--android:text="父容器右下角,带16dp的margin"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv1"-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:background="@color/c_blue"-->
+    <!--android:includeFontPadding="false"-->
+    <!--android:padding="0dp"-->
+    <!--android:text="ay 居中"-->
+    <!--android:textSize="50sp"/>-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="120dp"-->
+    <!--android:layout_alignBottom="@id/tv1"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_toRightOf="@+id/tv1"-->
+    <!--android:background="@color/c_green"-->
+    <!--android:text="与居中的下对齐，并位于其右方20dp处"/>-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignBaseline="@+id/tv1"-->
+    <!--android:background="@color/c_pink"-->
+    <!--android:gravity="left|top"-->
+    <!--android:text="ay 与居中的处于同一基准线（英文书写的四线中的第三根线，两边a的是在同一基准线的）"/>-->
+
+    <!--</RelativeLayout>-->
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="150dp"-->
+    <!--android:layout_height="150dp"-->
+    <!--android:background="@color/c_blue"-->
+    <!--android:text="1"/>-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="70dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:background="@color/c_pink"-->
+    <!--android:text="盖在1上面"/>-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="120dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginTop="50dp"-->
+    <!--android:background="@color/c_purple"-->
+    <!--android:text="居中，且marginTop：50dp"/>-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="120dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginTop="180dp"-->
+    <!--android:background="@color/c_green"-->
+    <!--android:text="marginTop：180dp，marginLeft：10dp"/>-->
+    <!--</FrameLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:text="25%"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@color/c_pink"/>-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:text="25%"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@color/c_blue"/>-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:text="25%"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@color/c_green"/>-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:text="25%"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@color/c_purple"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:text="20%"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@color/c_pink"/>-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="20%"-->
+    <!--android:background="@color/c_blue"/>-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:text="40%"-->
+    <!--android:layout_weight="2"-->
+    <!--android:background="@color/c_green"/>-->
+
+    <!--<TextView-->
+    <!--style="@style/cTxt"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:text="20%"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@color/c_purple"/>-->
+    <!--</LinearLayout>-->
+
+    <!--&lt;!&ndash;<lk.cn.com.newbanner.alarm.CircleProgress&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/pb"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="160dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="90dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:paddingBottom="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:paddingTop="20dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:paddingRight="30dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="#e51265"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:paddingLeft="40dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center_horizontal"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:color="#0058f1"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:inner_color="#fff"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:progress="100"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:thiness="20dp"/>&ndash;&gt;-->
+
+
+    <!--<View-->
+    <!--android:id="@+id/v"-->
+    <!--android:layout_width="160dp"-->
+    <!--android:layout_height="160dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="#ff0000"/>-->
+
+    <!--<lk.cn.com.newbanner.alarm.CircleProgress-->
+    <!--android:id="@+id/pb"-->
+    <!--android:layout_width="160dp"-->
+    <!--android:layout_height="160dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--app:color="#0058f1"-->
+    <!--app:inner_color="#fff"-->
+    <!--app:progress="100"-->
+    <!--app:thiness="20dp"/>-->
+
+
+</LinearLayout>

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 import lk.cn.com.newbanner.alarm.AlarmActivity;
 import lk.cn.com.newbanner.behavior.BehaviorActivity;
+import lk.cn.com.newbanner.drawable.DrawableActivity;
 import lk.cn.com.newbanner.immersive.ThemeActivity;
 import lk.cn.com.newbanner.overdraw.OverDrawActivity;
 
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ActivityItem("定时器", AlarmActivity.class));
         list.add(new ActivityItem("主题、沉浸式与状态栏、底部条", ThemeActivity.class));
         list.add(new ActivityItem("过度绘制", OverDrawActivity.class));
+        list.add(new ActivityItem("Drawable", DrawableActivity.class));
+        list.add(new ActivityItem("Layout", LayoutActivity.class));
     }
 
     @Override

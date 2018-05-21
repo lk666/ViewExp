@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="lk.cn.com.newbanner">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -42,6 +43,9 @@
             android:theme="@style/BilibiliTheme"/>
         <activity android:name=".overdraw.OverDrawActivity"
                   android:theme="@style/OverDrawTheme"/>
+        <activity android:name=".drawable.DrawableActivity"/>
+        <activity android:name=".LayoutActivity"/>
+        <activity android:name=".recycle.RecycleActivity"/>
 
     </application>
 
