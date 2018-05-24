@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v4.app.FragmentActivity
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.StaggeredGridLayoutManager
+import android.support.v7.widget.helper.ItemTouchHelper
 import android.view.View
 import com.chad.library.adapter.base.BaseQuickAdapter
 import kotlinx.android.synthetic.main.activity_recycle.*
@@ -32,12 +33,18 @@ class RecycleActivity : FragmentActivity(), BaseQuickAdapter.OnItemClickListener
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycle)
 
+// todo ptr 与 ItemTouchHelper滑动冲突，在拉到顶端，向下拖动时
         ptr.setEnableLoadmoreWhenContentNotFull(true)
         ptr.setOnRefreshListener { getInitData() }
         ptr.setOnLoadmoreListener { getMore() }
 
         rv.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
         rv.itemAnimator = DefaultItemAnimator()
+
+        // 添加ItemTouchHelper
+        val callback = SimpleItemTouchHelperCallback(adapter)
+        val touchHelper = ItemTouchHelper(callback)
+        touchHelper.attachToRecyclerView(rv)
 
         adapter.onItemClickListener = this
         adapter.openLoadAnimation()
@@ -78,8 +85,19 @@ class RecycleActivity : FragmentActivity(), BaseQuickAdapter.OnItemClickListener
                 pos2 = random.nextInt(data.size)
             }
             val i2 = data[pos2]
-            val i1 = data.removeAt(pos1)
-            data.add(if (pos1 < pos2) pos2 - 1 else pos2, i1)
+            val i1 = data[pos1]
+
+            if (pos1 < pos2) {
+                //分别把中间所有的 item 的位置重新交换
+                for (i in pos1 until pos2) {
+                    Collections.swap(data, i, i + 1)
+                }
+            } else {
+                for (i in pos1 downTo pos2 + 1) {
+                    Collections.swap(data, i, i - 1)
+                }
+            }
+
             adapter.notifyItemMoved(pos1, pos2)
             toast("move ${i1.txt} to ${i2.txt} position")
         }
