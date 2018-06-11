@@ -34,6 +34,8 @@ class RecycleActivity : FragmentActivity(), BaseQuickAdapter.OnItemClickListener
         setContentView(R.layout.activity_recycle)
 
 // todo ptr 与 ItemTouchHelper滑动冲突，在拉到顶端，向下拖动时
+        ptr.isEnableLoadmore = false
+        ptr.isEnableRefresh = false
         ptr.setEnableLoadmoreWhenContentNotFull(true)
         ptr.setOnRefreshListener { getInitData() }
         ptr.setOnLoadmoreListener { getMore() }

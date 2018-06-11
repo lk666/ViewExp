@@ -14,6 +14,7 @@ import lk.cn.com.newbanner.drawable.DrawableActivity;
 import lk.cn.com.newbanner.immersive.ThemeActivity;
 import lk.cn.com.newbanner.overdraw.OverDrawActivity;
 import lk.cn.com.newbanner.recycle.RecycleActivity;
+import lk.cn.com.newbanner.views.ViewsActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ActivityItem("Drawable", DrawableActivity.class));
         list.add(new ActivityItem("Layout", LayoutActivity.class));
         list.add(new ActivityItem("RecycleView", RecycleActivity.class));
+        list.add(new ActivityItem("控件", ViewsActivity.class));
     }
 
     @Override

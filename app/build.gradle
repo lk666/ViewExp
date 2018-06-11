@@ -34,6 +34,7 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
 
     compile 'com.makeramen:roundedimageview:2.2.1'
+    compile 'com.github.Commit451:NativeStackBlur:1.0.5'
 }
 
 apply plugin: 'kotlin-android'

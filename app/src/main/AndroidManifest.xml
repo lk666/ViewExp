@@ -3,10 +3,11 @@
           package="lk.cn.com.newbanner">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:name=".APPContext"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:name=".APPContext"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -18,17 +19,20 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".BannerActivity" android:label="Banner">
+        <activity
+            android:name=".BannerActivity"
+            android:label="Banner">
 
-            <!--多个LAUNCHER可以有多个入口-->
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN"/>-->
+            <!-- 多个LAUNCHER可以有多个入口 -->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
 
-            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-            <!--</intent-filter>-->
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".AppBarActivity"/>
-        <activity android:name=".RippleActivity" />
+        <activity android:name=".RippleActivity"/>
         <activity android:name=".behavior.BehaviorActivity"/>
         <activity android:name=".alarm.AlarmActivity"/>
         <activity android:name=".immersive.ThemeActivity"/>
@@ -41,12 +45,16 @@
             android:name=".immersive.bilibili.ImmersiveActivity"
             android:configChanges="keyboard|screenSize|orientation"
             android:theme="@style/BilibiliTheme"/>
-        <activity android:name=".overdraw.OverDrawActivity"
-                  android:theme="@style/OverDrawTheme"/>
+        <activity
+            android:name=".overdraw.OverDrawActivity"
+            android:theme="@style/OverDrawTheme"/>
         <activity android:name=".drawable.DrawableActivity"/>
         <activity android:name=".LayoutActivity"/>
         <activity android:name=".recycle.RecycleActivity"/>
-
+        <activity
+            android:name=".views.ViewsActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
     </application>
 
 </manifest>
