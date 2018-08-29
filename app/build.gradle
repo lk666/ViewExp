@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion "26.0.3"
     defaultConfig {
         applicationId "lk.cn.com.newbanner"
         minSdkVersion rootProject.ext.minSdkVersion
