@@ -18,7 +18,7 @@ class ViewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_views)
 
-        Thread({
+        Thread {
             val res = resources
             val bmp = BitmapFactory.decodeResource(res, R.mipmap.hh)
             val bm = NativeStackBlur.process(bmp, 20)
@@ -28,7 +28,7 @@ class ViewsActivity : AppCompatActivity() {
                 tv72.background = d
             }
 
-        }).start()
+        }.start()
 
         tv81.setOnClickListener {
             tv81.isEnabled = false
@@ -37,6 +37,8 @@ class ViewsActivity : AppCompatActivity() {
         tv82.setOnClickListener {
             tv82.isEnabled = false
             tv81.isEnabled = true
+
+            sb.isEnabled = !sb.isEnabled
         }
     }
 

@@ -7,4 +7,15 @@
         <attr name="progress" format="float"/>
         <attr name="android:width"/>
     </declare-styleable>
+
+
+    <declare-styleable name="ShadowButton">
+        <attr name="shadow_color" format="reference"/>
+        <attr name="bg_color" format="reference"/>
+        <attr name="shadow_radius" format="float"/>
+        <attr name="shadow_width" format="dimension"/>
+        <attr name="shadow_dx" format="dimension"/>
+        <attr name="shadow_dy" format="dimension"/>
+        <attr name="shadow_corner_radius" format="float"/>
+    </declare-styleable>
 </resources>

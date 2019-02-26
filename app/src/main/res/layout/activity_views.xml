@@ -78,6 +78,40 @@
             app:layout_constraintStart_toStartOf="@+id/gl1"
             app:layout_constraintTop_toBottomOf="@+id/tv8"/>
 
+        <!--<attr name="shadow_color" format="reference"/>-->
+        <!--<attr name="bg_color" format="reference"/>-->
+        <!--<attr name="shadow_radius" format="float"/>-->
+        <!--<attr name="shadow_width" format="dimension"/>-->
+        <!--<attr name="shadow_dx" format="dimension"/>-->
+        <!--<attr name="shadow_dy" format="dimension"/>-->
+        <!--<attr name="radius" format="float"/>-->
+        <lk.cn.com.newbanner.views.ShadowButton
+            app:shadow_color="@color/shadow_botton"
+            app:bg_color="@color/shadow_botton_bg"
+            android:shadowRadius="6"
+            app:shadow_width="5dp"
+            app:shadow_dx="0dp"
+            app:shadow_dy="5dp"
+            app:shadow_corner_radius="4"
+
+
+            android:id="@+id/sb"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="4dp"
+            android:clickable="true"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:text="自定义阴影按钮"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toEndOf="@+id/gl2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv8"/>
+
         <TextView
             android:id="@+id/tv6"
             android:layout_width="wrap_content"
